@@ -1,0 +1,2729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd" version="2007" revision="B">
+   <Header id="straton 2" nameStructure="IEDName"/>
+   <Communication>
+      <SubNetwork name="Default_subnet" type="8-MMS">
+         <Text/>
+         <ConnectedAP iedName="PP1" apName="N">
+            <Address>
+               <P type="IP">0.0.0.0</P>
+               <P type="IP-SUBNET">255.255.255.0</P>
+               <P type="IP-GATEWAY">0.0.0.0</P>
+               <P type="OSI-TSEL">0001</P>
+               <P type="OSI-SSEL">0001</P>
+               <P type="OSI-PSEL">00000001</P>
+               <P type="OSI-AP-TITLE">1,3,9999,23</P>
+               <P type="OSI-AE-QUALIFIER">23</P>
+               <P type="VLAN-ID">001</P>
+            </Address>
+            <GSE ldInst="Application" cbName="Pos_XCBR1">
+               <Address>
+                  <P type="MAC-Address">01-0C-CD-01-01-00</P>
+                  <P type="APPID">1</P>
+                  <P type="VLAN-ID">001</P>
+                  <P type="VLAN-PRIORITY">4</P>
+               </Address>
+            </GSE>
+         </ConnectedAP>
+      </SubNetwork>
+   </Communication>
+   <IED name="PP1" type="UA" desc="UA" manufacturer="UNAL" configVersion="V01" originalSclVersion="2007" originalSclRevision="B">
+      <Private type="Siemens-MasterId">f76a9d2b-31df-499d-8fb2-ffa10f26caf0</Private>
+      <Private type="Siemens-s7ManagerName">7SL87</Private>
+      <Private type="Siemens-ICD-Language">en-US</Private>
+      <Private type="Siemens-Siprotec5-Product-Code">7SL87-DAAA-AA0-0AAAA0-AT1111-13111B-BADAAB-DAAAC0-CB1BA1-BB1</Private>
+      <Private type="Siemens-Siprotec5-Application-Template">7Sx87_Basic_1_3pol</Private>
+      <Private type="Siemens-Siprotec5-Communication-Configuration-Version">96201</Private>
+      <Private type="Siemens-Siprotec5-Configuration-Version">V09.60.01</Private>
+      <Private type="Siemens-IsSiprotec5IED"/>
+      <Private type="Siemens-IED-Id">f76a9d2b-31df-499d-8fb2-ffa10f26caf0</Private>
+      <Private type="Siemens-ModifiedDate">10/31/2023 16:00:09</Private>
+      <Private type="Siemens-ModificationCounter">10</Private>
+      <Private type="Siemens-CID-MainIED"/>
+      <Services nameLength="64">
+         <DynAssociation max="6"/>
+         <GetDirectory/>
+         <GetDataObjectDefinition/>
+         <DataObjectDirectory/>
+         <GetDataSetValue/>
+         <DataSetDirectory/>
+         <ConfDataSet modify="true" maxAttributes="200" max="50"/>
+         <DynDataSet maxAttributes="60" max="30"/>
+         <ReadWrite/>
+         <ConfReportControl bufConf="true" bufMode="both" max="60"/>
+         <GetCBValues/>
+         <ReportSettings rptID="Dyn" optFields="Dyn" bufTime="Dyn" trgOps="Dyn" intgPd="Dyn" cbName="Conf" datSet="Dyn"/>
+         <GSESettings appID="Conf" cbName="Conf" datSet="Conf"/>
+         <GOOSE max="16"/>
+         <FileHandling/>
+         <ConfLNs fixPrefix="false" fixLnInst="false"/>
+         <ClientServices goose="true" maxGOOSE="128" supportsLdName="true" maxAttributes="0" gsse="false" bufReport="false" unbufReport="false" readLog="false" sv="false" maxReports="0" maxSMV="0"/>
+         <ConfLdName/>
+         <SupSubscription maxGo="0" maxSv="0"/>
+         <SettingGroups>
+            <SGEdit/>
+            <ConfSG/>
+         </SettingGroups>
+      </Services>
+      <AccessPoint name="N">
+         <Server timeout="0">
+            <Private type="Siemens-MasterId">86a7b2bf-926c-420b-aba6-9ef9bd34b407</Private>
+            <Authentication/>
+            <LDevice inst="Application" desc="Application">
+               <Private type="Siemens-MasterId">6ca79a92-159f-4594-9e3a-b3c07d8496d8</Private>
+               <LN0 lnClass="LLN0" lnType="SIPROTEC5_LNType_LLN0_Application" inst="" desc="General">
+                  <Private type="Siemens-MasterId">95ddbf11-f134-4432-b91c-af3e361e3d36</Private>
+                  <DataSet name="Pos">
+                     <FCDA ldInst="Application" lnClass="XCBR" lnInst="1" doName="Pos" fc="ST"/>
+                  </DataSet>
+                  <DOI name="Mod" desc="Application mode"/>
+                  <DOI name="Beh" desc="Behavior"/>
+                  <DOI name="Health" desc="Health (61850 only)"/>
+                  <DOI name="NamPlt" desc="Name plate">
+                     <DAI name="configRev">
+                        <Val>2023-10-30 12:51:18</Val>
+                     </DAI>
+                     <DAI name="ldNs">
+                        <Val>IEC 61850-7-4:2007B</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="LEDRs" desc="LED reset"/>
+                  <DOI name="LocKey" desc="Sw.authority key/set">
+                     <DAI name="dataNs">
+                        <Val>IEC 61850-7-4:2007B</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="LocSta" desc="Switching auth. station">
+                     <DAI name="dataNs">
+                        <Val>IEC 61850-7-4:2007B</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="MltLev" desc="Multiple sw.auth. levels">
+                     <DAI name="setVal">
+                        <Val>false</Val>
+                     </DAI>
+                     <DAI name="dataNs">
+                        <Val>IEC 61850-7-4:2007B</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="ProtOnOff" desc="Protection on"/>
+                  <DOI name="FnctLO" desc="Device logout"/>
+                  <DOI name="SwAuthEna1" desc="Enable sw. auth. 1">
+                     <DAI name="operTimeout">
+                        <Val>1000</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="SwAuthEna2" desc="Enable sw. auth. 2">
+                     <DAI name="operTimeout">
+                        <Val>1000</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="SwAuthEna3" desc="Enable sw. auth. 3">
+                     <DAI name="operTimeout">
+                        <Val>1000</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="SwAuthEna4" desc="Enable sw. auth. 4">
+                     <DAI name="operTimeout">
+                        <Val>1000</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="SwAuthEna5" desc="Enable sw. auth. 5">
+                     <DAI name="operTimeout">
+                        <Val>1000</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="LedTstStrt" desc="&gt;LED reset"/>
+                  <DOI name="FloOn" desc="&gt;Dev. funct.logout on"/>
+                  <DOI name="FloOff" desc="&gt;Dev. funct.logout off"/>
+                  <DOI name="SGChoiceB1" desc="&gt;SG choice bit 1"/>
+                  <DOI name="SGChoiceB2" desc="&gt;SG choice bit 2"/>
+                  <DOI name="SGChoiceB3" desc="&gt;SG choice bit 3"/>
+                  <DOI name="LightOn" desc="&gt;Light on"/>
+                  <DOI name="BOBlocked" desc="&gt;Block relays"/>
+                  <DOI name="Inactive" desc="Protection inactive"/>
+                  <DOI name="HealthDev" desc="Health"/>
+                  <DOI name="LedTstOut" desc="LED have been reset"/>
+                  <DOI name="FloCmd" desc="Logged off via control"/>
+                  <DOI name="FloState" desc="Device logged off"/>
+                  <DOI name="SwAuth" desc="Switching authority"/>
+                  <DOI name="SwMod" desc="Switching mode"/>
+                  <DOI name="AcqBlkAct" desc="Acq.blocking active"/>
+                  <DOI name="SubstAct" desc="Manual update active"/>
+                  <DOI name="ActiveSG" desc="Active settings group"/>
+                  <DOI name="FunInTest" desc="Functions in Test mode"/>
+                  <DOI name="ResCmpFmt" desc="Set. format residu. comp.">
+                     <DAI name="setVal">
+                        <Val>RERL_XEXL</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="EnaAuthID" desc="Specific sw. authorities">
+                     <DAI name="setVal">
+                        <Val>false</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="AuthIDLev" desc="Specific sw.auth. valid for">
+                     <DAI name="setVal">
+                        <Val>station/remote</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="NumAuthID" desc="Num. of specific sw.auth.">
+                     <DAI name="setVal">
+                        <Val>2</Val>
+                     </DAI>
+                     <DAI name="minVal">
+                        <Val>2</Val>
+                     </DAI>
+                     <DAI name="maxVal">
+                        <Val>5</Val>
+                     </DAI>
+                     <DAI name="stepSize">
+                        <Val>1</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="MltAuthID" desc="Multiple specific sw.auth.">
+                     <DAI name="setVal">
+                        <Val>false</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="SwAuthID1" desc="Ident. sw.auth. 1"/>
+                  <DOI name="SwAuthID2" desc="Ident. sw.auth. 2"/>
+                  <DOI name="SwAuthID3" desc="Ident. sw.auth. 3"/>
+                  <DOI name="SwAuthID4" desc="Ident. sw.auth. 4"/>
+                  <DOI name="SwAuthID5" desc="Ident. sw.auth. 5"/>
+                  <DOI name="ShowLckCnd" desc="Show int.lck.cond. on HMI">
+                     <DAI name="setVal">
+                        <Val>false</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="EnTestMod" desc="Activate device test mode">
+                     <DAI name="setVal">
+                        <Val>false</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="RelBoOnTst" desc="Oper.bin.outp. under test">
+                     <DAI name="setVal">
+                        <Val>false</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="ResvTms" desc="Reserv.time for com.prot.">
+                     <DAI name="setVal">
+                        <Val>120</Val>
+                     </DAI>
+                     <DAI name="maxVal">
+                        <Val>65535</Val>
+                     </DAI>
+                     <DAI name="stepSize">
+                        <Val>1</Val>
+                     </DAI>
+                     <SDI name="units">
+                        <DAI name="SIUnit">
+                           <Val>s</Val>
+                        </DAI>
+                     </SDI>
+                  </DOI>
+                  <GSEControl type="GOOSE" name="Pos_XCBR1" datSet="Pos" appID="Pos_XCBR1" confRev="1"/>
+                  <SettingControl actSG="1" numOfSGs="1">
+                     <Private type="Siemens-MasterId">28c95957-177b-41f9-8b13-7e13dda394ef</Private>
+                  </SettingControl>
+               </LN0>
+               <LN lnClass="CALH" lnType="CALH" inst="1"/>
+               <LN lnClass="LPHD" lnType="SIPROTEC5_LNType_LPHD" inst="0" desc="Device">
+                  <Private type="Siemens-MasterId">bbfaf0a1-de64-4e92-a8ee-db2ae0d9e98d</Private>
+                  <DOI name="PhyNam" desc="Physical device name">
+                     <DAI name="vendor">
+                        <Val>SIEMENS</Val>
+                     </DAI>
+                     <DAI name="hwRev">
+                        <Val>7SL87-DAAA-AA0-0AAAA0-AT1111-13111B-BADAAB-DAAAC0-CB1BA1-BB1</Val>
+                     </DAI>
+                     <DAI name="swRev">
+                        <Val>V09.62</Val>
+                     </DAI>
+                     <DAI name="model">
+                        <Val>7SL87</Val>
+                     </DAI>
+                     <DAI name="d">
+                        <Val>SIEMENS SIPROTEC 5</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="PhyHealth" desc="Physical health"/>
+                  <DOI name="Proxy" desc="Proxy"/>
+                  <DOI name="PwrUp" desc="Device startup"/>
+                  <DOI name="Sim" desc="GOOSE/SV sim.mode"/>
+                  <DOI name="OpTmh" desc="Device operating hours">
+                     <SDI name="units">
+                        <DAI name="SIUnit">
+                           <Val>h</Val>
+                        </DAI>
+                     </SDI>
+                  </DOI>
+                  <DOI name="NamPlt" desc="Name plate">
+                     <DAI name="configRev">
+                        <Val>2023-10-30 12:51:18</Val>
+                     </DAI>
+                  </DOI>
+                  <DOI name="GoStop" desc="&gt;GOOSE Stop"/>
+                  <DOI name="SvStop" desc="&gt;SV Stop"/>
+                  <DOI name="LifeCon" desc="Life contact"/>
+                  <DOI name="BatFail" desc="Battery failure"/>
+                  <DOI name="ClkFail" desc="Clock fail"/>
+                  <DOI name="ErrMeasT" desc="Error meas. trans."/>
+                  <DOI name="ErrComp" desc="Compensation error"/>
+                  <DOI name="ErrOffset" desc="Offset error"/>
+                  <DOI name="DigsiAct" desc="DIGSI active"/>
+                  <DOI name="SimuMode" desc="Simulation mode active"/>
+                  <DOI name="CommMode" desc="Commiss. mode active"/>
+                  <DOI name="ErrMemory" desc="Error memory"/>
+                  <DOI name="AuxPwrFail" desc="Auxiliary Power Fail"/>
+                  <DOI name="SeuHappened" desc="SEU happened"/>
+                  <DOI name="PSModFail" desc="Power sup. Module fail."/>
+                  <DOI name="PSModOK" desc="Power sup. Module OK"/>
+                  <DOI name="OsopNotCon" desc="OSOP not connected"/>
+                  <DOI name="PSAuxPwrFail" desc="Pow. sup. aux. pow. fail."/>
+                  <DOI name="PSAuxPwrOK" desc="Power sup.aux.pow.OK"/>
+                  <DOI name="PSModFailSps" desc="Power sup. Module fail."/>
+                  <DOI name="PSAuxFailSps" desc="Pow. sup. aux. pow. fail."/>
+                  <DOI name="Logon" desc="Cyber Security state"/>
+                  <DOI name="CybSecEvt" desc="Cyber-security event"/>
+                  <DOI name="MsgLost" desc="Event lost"/>
+                  <DOI name="ChtBlk" desc="Chatter blocking"/>
+                  <DOI name="FlshDskHth" desc="Flash disk health"/>
+                  <DOI name="PrcModIna" desc="Process mode inactive"/>
+               </LN>
+               <LN lnClass="PTOC" lnType="PTOC" inst="1"/>
+               <LN lnClass="XCBR" lnType="XCBR" inst="1"/>
+            </LDevice>
+         </Server>
+      </AccessPoint>
+   </IED>
+   <DataTypeTemplates>
+      <LNodeType id="SIPROTEC5_LNType_LLN0_Application" lnClass="LLN0">
+         <DO name="Mod" type="SIPROTEC5_DOType_Mod_controllable_OnBlockedTestTestBlocked_with_InitVal_V09.60.01_V09.60.01"/>
+         <DO name="Beh" type="SIPROTEC5_DOType_ENS_Behavior_V09.60.01_V09.60.01"/>
+         <DO name="Health" type="SIPROTEC5_DOType_ENS_Health_V09.60.01_V09.60.01"/>
+         <DO name="NamPlt" type="SIPROTEC5_DOType_LPL_NamPlt_for_LLN0_V09.60.01_V09.60.01"/>
+         <DO name="LEDRs" type="SIPROTEC5_DOType_SPC_dir_with_nor_sec_V09.60.01_V09.60.01"/>
+         <DO name="LocKey" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="LocSta" type="SIPROTEC5_DOType_SPC_dir_with_nor_sec_FnKey_toggle_on_off_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="MltLev" type="SIPROTEC5_DOType_SPG_readOnly_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ProtOnOff" type="SIPROTEC5_DOType_SPC_dir_with_nor_sec_FnKey_toggle_on_off_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FnctLO" type="SIPROTEC5_DOType_SPC_dir_with_nor_sec_FnKey_toggle_on_off_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthEna1" type="SIPROTEC5_DOType_SPC_dir_with_enh_sec_initVal_and_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthEna2" type="SIPROTEC5_DOType_SPC_dir_with_enh_sec_initVal_and_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthEna3" type="SIPROTEC5_DOType_SPC_dir_with_enh_sec_initVal_and_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthEna4" type="SIPROTEC5_DOType_SPC_dir_with_enh_sec_initVal_and_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthEna5" type="SIPROTEC5_DOType_SPC_dir_with_enh_sec_initVal_and_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="LedTstStrt" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FloOn" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FloOff" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SGChoiceB1" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SGChoiceB2" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SGChoiceB3" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="LightOn" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="BOBlocked" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="Inactive" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="HealthDev" type="SIPROTEC5_DOType_ENS_Health_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="LedTstOut" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FloCmd" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FloState" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuth" type="SIPROTEC5_DOType_ENS_SwitchingAuthority_LocalDigsiStationRemote_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwMod" type="SIPROTEC5_DOType_ENS_SwitchingMode_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="AcqBlkAct" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SubstAct" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ActiveSG" type="SIPROTEC5_DOType_INS_INT32_dupd_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FunInTest" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ResCmpFmt" type="SIPROTEC5_DOType_ENG_TextList_ResCmpFmt_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="EnaAuthID" type="SIPROTEC5_DOType_SPG_readOnly_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="AuthIDLev" type="SIPROTEC5_DOType_ENG_SwitchingAuthority_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="NumAuthID" type="SIPROTEC5_DOType_ING_INT32_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="MltAuthID" type="SIPROTEC5_DOType_SPG_readOnly_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthID1" type="SIPROTEC5_DOType_VSG_ASCII_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthID2" type="SIPROTEC5_DOType_VSG_ASCII_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthID3" type="SIPROTEC5_DOType_VSG_ASCII_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthID4" type="SIPROTEC5_DOType_VSG_ASCII_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SwAuthID5" type="SIPROTEC5_DOType_VSG_ASCII_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ShowLckCnd" type="SIPROTEC5_DOType_SPG_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="EnTestMod" type="SIPROTEC5_DOType_SPG_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="RelBoOnTst" type="SIPROTEC5_DOType_SPG_edit_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ResvTms" type="SIPROTEC5_DOType_ING_INT32_edit_with_dataNs_V09.60.01_V09.60.01"/>
+      </LNodeType>
+      <LNodeType id="SIPROTEC5_LNType_LPHD" lnClass="LPHD">
+         <DO name="PhyNam" type="SIPROTEC5_DOType_DPL_V09.60.01_V09.60.01"/>
+         <DO name="PhyHealth" type="SIPROTEC5_DOType_ENS_Health_V09.60.01_V09.60.01"/>
+         <DO name="Proxy" type="SIPROTEC5_DOType_SPS_V09.60.01_V09.60.01"/>
+         <DO name="PwrUp" type="SIPROTEC5_DOType_SPS_V09.60.01_V09.60.01"/>
+         <DO name="Sim" type="SIPROTEC5_DOType_SPC_dir_with_nor_sec_V09.60.01_V09.60.01"/>
+         <DO name="OpTmh" type="SIPROTEC5_DOType_INS_INT32_with_units_V09.60.01_V09.60.01"/>
+         <DO name="NamPlt" type="SIPROTEC5_DOType_LPL_NamPlt_for_Ed2_LN_V09.60.01_V09.60.01"/>
+         <DO name="GoStop" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SvStop" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="LifeCon" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="BatFail" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ClkFail" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ErrMeasT" type="SIPROTEC5_DOType_ENS_ErrMeasT_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ErrComp" type="SIPROTEC5_DOType_ENS_ErrComp_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ErrOffset" type="SIPROTEC5_DOType_ENS_ErrOffset_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="DigsiAct" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SimuMode" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="CommMode" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ErrMemory" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="AuxPwrFail" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="SeuHappened" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PSModFail" type="SIPROTEC5_DOType_INS_INT32_dupd_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PSModOK" type="SIPROTEC5_DOType_INS_INT32_dupd_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="OsopNotCon" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PSAuxPwrFail" type="SIPROTEC5_DOType_INS_INT32_dupd_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PSAuxPwrOK" type="SIPROTEC5_DOType_INS_INT32_dupd_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PSModFailSps" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PSAuxFailSps" type="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="Logon" type="SIPROTEC5_DOType_ENS_Login_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="CybSecEvt" type="SIPROTEC5_DOType_ENS_CyberSecEvent_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="MsgLost" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="ChtBlk" type="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="FlshDskHth" type="SIPROTEC5_DOType_ENS_Health_with_dataNs_V09.60.01_V09.60.01"/>
+         <DO name="PrcModIna" type="SIPROTEC5_DOType_SPS_UDEF_with_dataNs_V09.60.01_V09.60.01"/>
+      </LNodeType>
+      <LNodeType id="PTOC" lnClass="PTOC">
+         <DO name="Beh" type="ENS_Beh"/>
+         <DO name="Str" type="ACD"/>
+         <DO name="Op" type="ACT"/>
+         <DO name="OPER" type="ING"/>
+      </LNodeType>
+      <LNodeType id="CALH" lnClass="CALH">
+         <DO name="Beh" type="ENS_Beh"/>
+         <DO name="EXT" type="ING"/>
+         <DO name="R1" type="ING"/>
+         <DO name="R2" type="ING"/>
+         <DO name="R3" type="ING"/>
+         <DO name="R4" type="ING"/>
+         <DO name="TOP1" type="ING"/>
+         <DO name="TOP2" type="ING"/>
+         <DO name="TOP3" type="ING"/>
+         <DO name="TOP4" type="ING"/>
+      </LNodeType>
+      <LNodeType id="XCBR" lnClass="XCBR">
+         <DO name="Beh" type="ENS_Beh"/>
+         <DO name="Loc" type="SPS"/>
+         <DO name="OpCnt" type="INS"/>
+         <DO name="Pos" type="DPC"/>
+         <DO name="BlkOpn" type="SPC"/>
+         <DO name="BlkCls" type="SPC"/>
+      </LNodeType>
+      <DOType id="SIPROTEC5_DOType_ING_INT32_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ING">
+         <DA fc="SE" name="setVal" bType="INT32" valKind="Set"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="stepSize" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPG_edit_with_dataNs_V09.60.01_V09.60.01" cdc="SPG">
+         <DA fc="SE" name="setVal" bType="BOOLEAN" valKind="Set"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_VSG_ASCII_edit_with_dataNs_V09.60.01_V09.60.01" cdc="VSG">
+         <DA fc="SE" name="setVal" bType="VisString255" valKind="RO"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPG_readOnly_with_dataNs_V09.60.01_V09.60.01" cdc="SPG">
+         <DA fc="SE" name="setVal" bType="BOOLEAN" valKind="RO"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_SwitchingAuthority_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" type="SIPROTEC5_Textlist_SpecificSwitchingAuthorityLevel_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_ResCmpFmt_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_ResCmpFmt_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPS_with_dataNs_V09.60.01_V09.60.01" cdc="SPS">
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INS_INT32_dupd_with_dataNs_V09.60.01_V09.60.01" cdc="INS">
+         <DA dupd="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_SwitchingMode_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_SwitchingMode_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_SwitchingAuthority_LocalDigsiStationRemote_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_SwitchingAuthority_LocalDigsiStationRemote_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_Health_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_Health_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPS_for_Input_with_dataNs_V09.60.01_V09.60.01" cdc="SPS">
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="SV" name="subEna" bType="BOOLEAN"/>
+         <DA fc="SV" name="subVal" bType="BOOLEAN"/>
+         <DA fc="SV" name="subQ" bType="Quality"/>
+         <DA fc="SV" name="subID" bType="VisString64"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_dir_with_enh_sec_initVal_and_dataNs_V09.60.01_V09.60.01" cdc="SPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_enh_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-enhanced-security</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="operTimeout" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_dir_with_nor_sec_FnKey_toggle_on_off_with_dataNs_V09.60.01_V09.60.01" cdc="SPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_dir_with_nor_sec_V09.60.01_V09.60.01" cdc="SPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_LPL_NamPlt_for_LLN0_V09.60.01_V09.60.01" cdc="LPL">
+         <DA fc="DC" name="vendor" bType="VisString255" valKind="RO">
+            <Val>SIEMENS</Val>
+         </DA>
+         <DA fc="DC" name="swRev" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="d" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="configRev" bType="VisString255" valKind="RO"/>
+         <DA fc="EX" name="ldNs" bType="VisString255" valKind="RO"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_Health_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_Health_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_Behavior_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_Behavior_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_Mod_controllable_OnBlockedTestTestBlocked_with_InitVal_V09.60.01_V09.60.01" cdc="ENC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_Behavior_OnBlockedTestTestBlocked_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Mod_OnBlockedTestTestBlocked_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPS_UDEF_with_dataNs_V09.60.01_V09.60.01" cdc="SPS">
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="SV" name="subEna" bType="BOOLEAN"/>
+         <DA fc="SV" name="subVal" bType="BOOLEAN"/>
+         <DA fc="SV" name="subQ" bType="Quality"/>
+         <DA fc="SV" name="subID" bType="VisString64"/>
+         <DA fc="BL" name="blkEna" bType="BOOLEAN"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5/userdefined</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_CyberSecEvent_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_Login_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_Login_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_Login_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_ErrOffset_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_ErrOffset_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_ErrComp_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_ErrComp_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_ErrMeasT_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_EnType_ErrMeasT_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_LPL_NamPlt_for_Ed2_LN_V09.60.01_V09.60.01" cdc="LPL">
+         <DA fc="DC" name="vendor" bType="VisString255" valKind="RO">
+            <Val>SIEMENS</Val>
+         </DA>
+         <DA fc="DC" name="swRev" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="d" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="configRev" bType="VisString255" valKind="RO"/>
+         <DA fc="EX" name="lnNs" bType="VisString255" valKind="RO">
+            <Val>IEC 61850-7-4:2007B</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INS_INT32_with_units_V09.60.01_V09.60.01" cdc="INS">
+         <DA dchg="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPS_V09.60.01_V09.60.01" cdc="SPS">
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_DPL_V09.60.01_V09.60.01" cdc="DPL">
+         <DA fc="DC" name="vendor" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="hwRev" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="swRev" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="serNum" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="model" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="location" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="owner" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="d" bType="VisString255" valKind="RO"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_Mod_status_only_with_InitVal_V09.60.01_V09.60.01" cdc="ENC">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_Behavior_V09.60.01_V09.60.01">
+            <Val>on</Val>
+         </DA>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_V09.60.01_V09.60.01">
+            <Val>status-only</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_DateFormat_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_DateFormat_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ASG_INT32_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ASG">
+         <DA fc="SE" name="setMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_INT32_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="sVC" bType="Struct" type="SIPROTEC5_DAType_ScaledValueConfig_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_INT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="maxVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_INT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="stepSize" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_INT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_TSG_V09.60.01_V09.60.01" cdc="TSG">
+         <DA fc="SE" name="setCal" bType="Struct" type="SIPROTEC5_DAType_CalendarTime_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPG_edit_V09.60.01_V09.60.01" cdc="SPG">
+         <DA fc="SE" name="setVal" bType="BOOLEAN" valKind="Set"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ING_INT32_edit_V09.60.01_V09.60.01" cdc="ING">
+         <DA fc="SE" name="setVal" bType="INT32" valKind="Set"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="stepSize" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_TmZnTmSrc_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_TmZnTmSrc_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_TmSrcCh_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_TmSrcCh_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_Ports_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_Ports_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_TmSrcStd_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_TmSrcStd_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_TmSrcTyp_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_TmSrcTyp_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_VSS_V09.60.01_V09.60.01" cdc="VSS">
+         <DA dchg="true" fc="ST" name="stVal" bType="VisString255"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_BTS_V09.60.01_V09.60.01" cdc="BTS">
+         <DA dupd="true" fc="SR" name="objRef" bType="ObjRef">
+            <base:DclPropertyInstance value="VisString129" key="internalBType" xmlns:base="http://www.siemens.com/energy/2009/09/siprotec5/Base"/>
+         </DA>
+         <DA fc="SR" name="serviceType" bType="Enum" type="SIPROTEC5_Textlist_ServiceType_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="errorCode" bType="Enum" type="SIPROTEC5_Textlist_ServiceError_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="originatorID" bType="Octet64"/>
+         <DA fc="SR" name="t" bType="Timestamp"/>
+         <DA fc="SR" name="rptID" bType="VisString129"/>
+         <DA fc="SR" name="rptEna" bType="BOOLEAN"/>
+         <DA fc="SR" name="datSet" bType="ObjRef">
+            <base:DclPropertyInstance value="VisString129" key="internalBType" xmlns:base="http://www.siemens.com/energy/2009/09/siprotec5/Base"/>
+         </DA>
+         <DA fc="SR" name="confRev" bType="INT32U"/>
+         <DA fc="SR" name="optFlds" bType="OptFlds"/>
+         <DA fc="SR" name="bufTm" bType="INT32U"/>
+         <DA fc="SR" name="sqNum" bType="INT16U"/>
+         <DA fc="SR" name="trgOps" bType="TrgOps"/>
+         <DA fc="SR" name="intgPd" bType="INT32U"/>
+         <DA fc="SR" name="gi" bType="BOOLEAN"/>
+         <DA fc="SR" name="purgeBuf" bType="BOOLEAN"/>
+         <DA fc="SR" name="entryID" bType="EntryID"/>
+         <DA fc="SR" name="timeOfEntry" bType="EntryTime"/>
+         <DA fc="SR" name="resvTms" bType="INT16"/>
+         <DA fc="SR" name="owner" bType="Octet64"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_UTS_V09.60.01_V09.60.01" cdc="UTS">
+         <DA dupd="true" fc="SR" name="objRef" bType="ObjRef">
+            <base:DclPropertyInstance value="VisString129" key="internalBType" xmlns:base="http://www.siemens.com/energy/2009/09/siprotec5/Base"/>
+         </DA>
+         <DA fc="SR" name="serviceType" bType="Enum" type="SIPROTEC5_Textlist_ServiceType_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="errorCode" bType="Enum" type="SIPROTEC5_Textlist_ServiceError_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="originatorID" bType="Octet64"/>
+         <DA fc="SR" name="t" bType="Timestamp"/>
+         <DA fc="SR" name="rptID" bType="VisString129"/>
+         <DA fc="SR" name="rptEna" bType="BOOLEAN"/>
+         <DA fc="SR" name="resv" bType="BOOLEAN"/>
+         <DA fc="SR" name="datSet" bType="ObjRef">
+            <base:DclPropertyInstance value="VisString129" key="internalBType" xmlns:base="http://www.siemens.com/energy/2009/09/siprotec5/Base"/>
+         </DA>
+         <DA fc="SR" name="confRev" bType="INT32U"/>
+         <DA fc="SR" name="optFlds" bType="OptFlds"/>
+         <DA fc="SR" name="bufTm" bType="INT32U"/>
+         <DA fc="SR" name="sqNum" bType="INT8U"/>
+         <DA fc="SR" name="trgOps" bType="TrgOps"/>
+         <DA fc="SR" name="intgPd" bType="INT32U"/>
+         <DA fc="SR" name="gi" bType="BOOLEAN"/>
+         <DA fc="SR" name="owner" bType="Octet64"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_STS_V09.60.01_V09.60.01" cdc="STS">
+         <DA dupd="true" fc="SR" name="objRef" bType="ObjRef"/>
+         <DA fc="SR" name="serviceType" bType="Enum" type="SIPROTEC5_Textlist_ServiceType_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="errorCode" bType="Enum" type="SIPROTEC5_Textlist_ServiceError_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="originatorID" bType="Octet64"/>
+         <DA fc="SR" name="t" bType="Timestamp"/>
+         <DA fc="SR" name="numOfSG" bType="INT8U"/>
+         <DA fc="SR" name="actSG" bType="INT8U"/>
+         <DA fc="SR" name="editSG" bType="INT8U"/>
+         <DA fc="SR" name="cnfEdit" bType="BOOLEAN"/>
+         <DA fc="SR" name="lActTm" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_CST_V09.60.01_V09.60.01" cdc="CST">
+         <DA dupd="true" fc="SR" name="objRef" bType="ObjRef"/>
+         <DA fc="SR" name="serviceType" bType="Enum" type="SIPROTEC5_Textlist_ServiceType_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="errorCode" bType="Enum" type="SIPROTEC5_Textlist_ServiceError_V09.60.01_V09.60.01"/>
+         <DA fc="SR" name="originatorID" bType="Octet64"/>
+         <DA fc="SR" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ORG_V09.60.01_V09.60.01" cdc="ORG">
+         <DA dchg="true" fc="SP" name="setSrcRef" bType="ObjRef" valKind="RO"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_LPL_NamPlt_for_SIEMENS_LN_V09.60.01_V09.60.01" cdc="LPL">
+         <DA fc="DC" name="vendor" bType="VisString255" valKind="RO">
+            <Val>SIEMENS</Val>
+         </DA>
+         <DA fc="DC" name="swRev" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="d" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="configRev" bType="VisString255" valKind="RO"/>
+         <DA fc="EX" name="lnNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_Mod_controllable_with_InitVal_V09.60.01_V09.60.01" cdc="ENC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_Behavior_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_and_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Mod_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_OpModeRBRF_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_OpModeRBRF_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_No_Yes_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_No_Yes_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ASG_FLOAT32_PrimSec_SP_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ASG">
+         <DA fc="SE" name="setMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="maxVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="stepSize" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_ResetTrip_edit_and_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_ResetTrip_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_3poleCoupling_edit_and_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_3poleCoupling_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_Trip2phFault_edit_and_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_Trip2phFault_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ACT_3pol_with_dataNs_V09.60.01_V09.60.01" cdc="ACT">
+         <DA dchg="true" fc="ST" name="general" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ACD_PhsSel_GABCN_Without_DirRouting_V09.60.01_V09.60.01" cdc="ACD">
+         <DA dchg="true" fc="ST" name="general" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirGeneral" bType="Enum" type="SIPROTEC5_Textlist_DirectionGeneral_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="phsA" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirPhsA" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="phsB" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirPhsB" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="phsC" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirPhsC" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="neut" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirNeut" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ACT_1_3pol_GABC_V09.60.01_V09.60.01" cdc="ACT">
+         <DA dchg="true" fc="ST" name="general" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="phsA" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="phsB" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="phsC" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_LPL_NamPlt_V09.60.01_V09.60.01" cdc="LPL">
+         <DA fc="DC" name="vendor" bType="VisString255" valKind="RO">
+            <Val>SIEMENS</Val>
+         </DA>
+         <DA fc="DC" name="swRev" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="d" bType="VisString255" valKind="RO"/>
+         <DA fc="DC" name="configRev" bType="VisString255" valKind="RO"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_Always_WithTrip_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_Always_WithTrip_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INS_INT32_with_units_with_dataNs_V09.60.01_V09.60.01" cdc="INS">
+         <DA dchg="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_MV_Float_dupd_with_dataNs_V09.60.01_V09.60.01" cdc="MV">
+         <DA fc="MX" name="instMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA dupd="true" fc="MX" name="mag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_BCR_with_dataNs_V09.60.01_V09.60.01" cdc="BCR">
+         <DA dchg="true" fc="ST" name="actVal" bType="INT64"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="pulsQty" bType="FLOAT32" valKind="RO">
+            <Val>1</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INS_INT32_with_dataNs_V09.60.01_V09.60.01" cdc="INS">
+         <DA dchg="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_APC_FLOAT32_controllable_with_dataNs_V09.60.01_V09.60.01" cdc="APC">
+         <DA fc="MX" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="MX" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="MX" name="mxVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="MX" name="stSeld" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="sboTimeout" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="sboClass" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_sboClass_V09.60.01_V09.60.01">
+            <Val>operate-once</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="dbRef" bType="FLOAT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+         <DA fc="CO" name="SBO" bType="VisString129">
+            <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+         </DA>
+         <DA fc="CO" name="SBOw" bType="Struct" type="SIPROTEC5_DAType_Oper_Analog_V09.60.01_V09.60.01"/>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Analog_V09.60.01_V09.60.01"/>
+         <DA fc="CO" name="Cancel" bType="Struct" type="SIPROTEC5_DAType_Cancel_Analog_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INC_controllable_with_dataNs_V09.60.01_V09.60.01" cdc="INC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_INT32_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_TextList_POWCap_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dchg="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_POWCap_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_BCR_noFreeze_V09.60.01_V09.60.01" cdc="BCR">
+         <DA dchg="true" fc="ST" name="actVal" bType="INT64"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="pulsQty" bType="FLOAT32" valKind="RO">
+            <Val>1</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_status_only_V09.60.01_V09.60.01" cdc="SPC">
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_V09.60.01_V09.60.01">
+            <Val>status-only</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_DPC_XCBR_Pos_V09.60.01_V09.60.01" cdc="DPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="Dbpos"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="ST" name="stSeld" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA fc="SV" name="subEna" bType="BOOLEAN"/>
+         <DA fc="SV" name="subVal" bType="Dbpos"/>
+         <DA fc="SV" name="subQ" bType="Quality"/>
+         <DA fc="SV" name="subID" bType="VisString64"/>
+         <DA fc="BL" name="blkEna" bType="BOOLEAN"/>
+         <DA dchg="true" fc="CF" name="pulseConfig" bType="Struct" type="SIPROTEC5_DAType_PulseConfig_XCBR_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_V09.60.01_V09.60.01">
+            <Val>status-only</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INS_INT32_V09.60.01_V09.60.01" cdc="INS">
+         <DA dchg="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_DPC_Pos_status_only_V09.60.01_V09.60.01" cdc="DPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="Dbpos"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA fc="SV" name="subEna" bType="BOOLEAN"/>
+         <DA fc="SV" name="subVal" bType="Dbpos"/>
+         <DA fc="SV" name="subQ" bType="Quality"/>
+         <DA fc="SV" name="subID" bType="VisString64"/>
+         <DA fc="BL" name="blkEna" bType="BOOLEAN"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_V09.60.01_V09.60.01">
+            <Val>status-only</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ING_INT32_div_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ING">
+         <DA fc="SE" name="setVal" bType="INT32" valKind="Set"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="stepSize" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPS_for_Input_V09.60.01_V09.60.01" cdc="SPS">
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="SV" name="subEna" bType="BOOLEAN"/>
+         <DA fc="SV" name="subVal" bType="BOOLEAN"/>
+         <DA fc="SV" name="subQ" bType="Quality"/>
+         <DA fc="SV" name="subID" bType="VisString64"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_No_Yes_Advanced_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_No_Yes_Advanced_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_statusOnly_and_dir_with_nor_sec_V09.60.01_V09.60.01" cdc="SPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_and_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_DPC_CSWI_Pos_V09.60.01_V09.60.01" cdc="DPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="Dbpos"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="ST" name="stSeld" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_V09.60.01_V09.60.01">
+            <Val>status-only</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="sboTimeout" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="operTimeout" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA fc="CO" name="SBO" bType="VisString129">
+            <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+         </DA>
+         <DA fc="CO" name="SBOw" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+         <DA fc="CO" name="Cancel" bType="Struct" type="SIPROTEC5_DAType_Cancel_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_TextList_CBT_TstCnc_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_CBT_TstCnc_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_TextList_CBT_TstCls_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_CBT_TstCls_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_TextList_CBT_TstTr_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_CBT_TstTr_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_TextList_CBT_TstExec_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_CBT_TstExec_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_CMV_with_dataNs_V09.60.01_V09.60.01" cdc="CMV">
+         <DA fc="MX" name="instCVal" bType="Struct" type="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="MX" name="cVal" bType="Struct" type="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="db" bType="INT32U" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbAng" bType="INT32U" valKind="Set">
+            <Val>333</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbRef" bType="FLOAT32" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbAngRef" bType="FLOAT32" valKind="Set">
+            <Val>360</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_ClcMth_readOnly_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ClcMth_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>IEC 61850-7-4:2007B</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_WYE_ABCRes_V09.60.01_V09.60.01" cdc="WYE">
+         <SDO name="phsA" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsB" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsC" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="res" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01" cdc="CMV">
+         <DA fc="MX" name="instCVal" bType="Struct" type="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="MX" name="cVal" bType="Struct" type="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="db" bType="INT32U" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbAng" bType="INT32U" valKind="Set">
+            <Val>333</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbRef" bType="FLOAT32" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbAngRef" bType="FLOAT32" valKind="Set">
+            <Val>360</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_DEL_V09.60.01_V09.60.01" cdc="DEL">
+         <SDO name="phsAB" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsBC" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsCA" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_PQ_Sign_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_PQ_Sign_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_System_Neutralpoint_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_System_Neutralpoint_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ASG_FLOAT32_edit_V09.60.01_V09.60.01" cdc="ASG">
+         <DA fc="SE" name="setMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="maxVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="stepSize" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_FloInvalid_with_dataNs_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_On_Off_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_DisRM_PolSet_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_DisRM_PolSet_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_PickupTrip_FL_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_PickupTrip_FL_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_Mode_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_Mode_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENS_FltLoop_V09.60.01_V09.60.01" cdc="ENS">
+         <DA dupd="true" fc="ST" name="stVal" bType="Enum" type="SIPROTEC5_Textlist_FltLoop_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_MV_Float_dupd_V09.60.01_V09.60.01" cdc="MV">
+         <DA fc="MX" name="instMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA dupd="true" fc="MX" name="mag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_CMV_dupd_V09.60.01_V09.60.01" cdc="CMV">
+         <DA fc="MX" name="instCVal" bType="Struct" type="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01"/>
+         <DA dupd="true" fc="MX" name="cVal" bType="Struct" type="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_On_Off_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_On_Off_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ACD_PhsSel_GABC_Without_DirRouting_V09.60.01_V09.60.01" cdc="ACD">
+         <DA dchg="true" fc="ST" name="general" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirGeneral" bType="Enum" type="SIPROTEC5_Textlist_DirectionGeneral_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="phsA" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirPhsA" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="phsB" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirPhsB" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="ST" name="phsC" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="dirPhsC" bType="Enum" type="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ACT_3pol_V09.60.01_V09.60.01" cdc="ACT">
+         <DA dchg="true" fc="ST" name="general" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_INC_UDEF_with_dataNs_V09.60.01_V09.60.01" cdc="INC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="INT32"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="ST" name="stSeld" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA fc="SV" name="subEna" bType="BOOLEAN"/>
+         <DA fc="SV" name="subVal" bType="INT32"/>
+         <DA fc="SV" name="subQ" bType="Quality"/>
+         <DA fc="SV" name="subID" bType="VisString64"/>
+         <DA fc="BL" name="blkEna" bType="BOOLEAN"/>
+         <DA fc="CF" name="ctlModel" bType="Enum" type="SIPROTEC5_Textlist_ctlModel_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="sboTimeout" bType="INT32U">
+            <Val>10000</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="sboClass" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_sboClass_V09.60.01_V09.60.01">
+            <Val>operate-once</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="operTimeout" bType="INT32U">
+            <Val>1000</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5/userdefined</Val>
+         </DA>
+         <DA fc="CO" name="SBO" bType="VisString129"/>
+         <DA fc="CO" name="SBOw" bType="Struct" type="SIPROTEC5_DAType_Oper_INT32_V09.60.01_V09.60.01"/>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_INT32_V09.60.01_V09.60.01"/>
+         <DA fc="CO" name="Cancel" bType="Struct" type="SIPROTEC5_DAType_Cancel_INT32_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_StartMode_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_StartMode_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_MeasMethod_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_FundComp_TrRMS_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_PhGnd_PhPh_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_PhGnd_PhPh_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ING_INT32_div_edit_V09.60.01_V09.60.01" cdc="ING">
+         <DA fc="SE" name="setVal" bType="INT32" valKind="Set"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="stepSize" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_BCR_V09.60.01_V09.60.01" cdc="BCR">
+         <DA dchg="true" fc="ST" name="actVal" bType="INT64"/>
+         <DA dupd="true" fc="ST" name="frVal" bType="INT64"/>
+         <DA fc="ST" name="frTm" bType="Timestamp"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="pulsQty" bType="FLOAT32" valKind="RO">
+            <Val>1</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="frEna" bType="BOOLEAN" valKind="RO">
+            <Val>false</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="strTm" bType="Timestamp" valKind="RO"/>
+         <DA dchg="true" fc="CF" name="frPd" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="frRs" bType="BOOLEAN" valKind="RO">
+            <Val>false</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_statusOnly_and_dir_with_nor_sec_and_dataNs_V09.60.01_V09.60.01" cdc="SPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_status_only_and_dir_with_nor_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-normal-security</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SEQ_V09.60.01_V09.60.01" cdc="SEQ">
+         <SDO name="c1" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="c2" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="c3" type="SIPROTEC5_DOType_CMV_without_convertions_V09.60.01_V09.60.01"/>
+         <DA fc="MX" name="seqT" bType="Enum" type="SIPROTEC5_Textlist_SEQtype_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_MV_Float_with_dataNs_V09.60.01_V09.60.01" cdc="MV">
+         <DA fc="MX" name="instMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="MX" name="mag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="db" bType="INT32U" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbRef" bType="FLOAT32" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_WYE_ABCRes_mag_V09.60.01_V09.60.01" cdc="WYE">
+         <SDO name="phsA" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsB" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsC" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="res" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01" cdc="CMV">
+         <DA fc="MX" name="instCVal" bType="Struct" type="SIPROTEC5_DAType_Vector_mag_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="MX" name="cVal" bType="Struct" type="SIPROTEC5_DAType_Vector_mag_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="db" bType="INT32U" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbRef" bType="FLOAT32" valKind="Set">
+            <Val>0</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_DEL_mag_V09.60.01_V09.60.01" cdc="DEL">
+         <SDO name="phsAB" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsBC" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsCA" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_WYE_ABC_mag_V09.60.01_V09.60.01" cdc="WYE">
+         <SDO name="phsA" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsB" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+         <SDO name="phsC" type="SIPROTEC5_DOType_CMV_mag_without_convertions_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_MV_Float_V09.60.01_V09.60.01" cdc="MV">
+         <DA fc="MX" name="instMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="MX" name="mag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="db" bType="INT32U" valKind="Set">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="dbRef" bType="FLOAT32" valKind="Set">
+            <Val>0</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_StateRecognition_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_StateRecognition_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_OpenPoleDetector_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_OpenPoleDetector_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ACT_1_3pol_GABC_simpleConversions_with_dataNs_V09.60.01_V09.60.01" cdc="ACT">
+         <DA dchg="true" fc="ST" name="general" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="phsA" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="phsB" bType="BOOLEAN"/>
+         <DA dchg="true" fc="ST" name="phsC" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_VSS_with_dataNs_V09.60.01_V09.62.01" cdc="VSS">
+         <DA dchg="true" fc="ST" name="stVal" bType="VisString255"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_1588_PTPProfile_with_dataNs_V09.60.01_V09.62.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_1588_PTPProfile_V09.60.01_V09.62.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_1588_ClockType_with_dataNs_V09.60.01_V09.62.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_1588_ClockType_V09.60.01_V09.62.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ING_INT32_div_readOnly_V09.60.01_V09.62.01" cdc="ING">
+         <DA fc="SE" name="setVal" bType="INT32" valKind="RO"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="stepSize" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_PhsSeq_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_PhaseSequence_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ING_INT32_readOnly_with_dataNs_V09.60.01_V09.60.01" cdc="ING">
+         <DA fc="SE" name="setVal" bType="INT32" valKind="RO"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="maxVal" bType="INT32" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="stepSize" bType="INT32U" valKind="RO">
+            <Val>0</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_ActiveInactive_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_ActiveInactive_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_AInternTyp_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_AInternTyp_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_AMeasRange_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_AMeasRange_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_ArtgSec_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_ArtgSec_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_CTConnect_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_CTConnect_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_InvertedPh_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_InvertedPh_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_VSD_readOnly_V09.60.01_V09.60.01" cdc="VSD">
+         <DA fc="DC" name="val" bType="VisString255" valKind="RO"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_AccPro_edit_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_EnType_InstrumentTransformerProtectionRatingKind_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_AccMeas_edit_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_EnType_InstrumentTransformerMeasurementRatingKind_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_Trp_edit_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_Trp_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SAV_VDEWChannelNumber_V09.60.01_V09.60.01" cdc="SAV">
+         <DA fc="MX" name="instMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_INT32_V09.60.01_V09.60.01"/>
+         <DA qchg="true" fc="MX" name="q" bType="Quality"/>
+         <DA fc="MX" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="sVC" bType="Struct" type="SIPROTEC5_DAType_ScaledValueConfig_readOnly_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ASG_FLOAT32_readOnly_V09.60.01_V09.60.01" cdc="ASG">
+         <DA fc="SE" name="setMag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="units" bType="Struct" type="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="minVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="maxVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+         <DA dchg="true" fc="CF" name="stepSize" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_BlkMod_edit_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_BlkMod_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_VTConnect_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_VTConnect_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_CRevYear_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_CRevYear_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_CtdValType_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_CtdValType_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_Mode_On_Test_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_Behavior_Test_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_CalcVNChannel_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_CalcVNChannel_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_CalcINChannel_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_CalcINChannel_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_SmpRate_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_SmpRate_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_RcdStore_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_RcdStore_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_ENG_TextList_RcdStart_with_dataNs_V09.60.01_V09.60.01" cdc="ENG">
+         <DA fc="SE" name="setVal" bType="Enum" valKind="Set" type="SIPROTEC5_Textlist_RcdStart_V09.60.01_V09.60.01"/>
+         <DA fc="EX" name="dataNs" bType="VisString255" valKind="RO">
+            <Val>SIPROTEC5</Val>
+         </DA>
+      </DOType>
+      <DOType id="SIPROTEC5_DOType_SPC_dir_with_enh_sec_FnKey_on_V09.60.01_V09.60.01" cdc="SPC">
+         <DA fc="ST" name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <DA fc="ST" name="ctlNum" bType="INT8U"/>
+         <DA dchg="true" fc="ST" name="stVal" bType="BOOLEAN"/>
+         <DA qchg="true" fc="ST" name="q" bType="Quality"/>
+         <DA fc="ST" name="t" bType="Timestamp"/>
+         <DA dchg="true" fc="OR" name="opRcvd" bType="BOOLEAN"/>
+         <DA dchg="true" fc="OR" name="opOk" bType="BOOLEAN"/>
+         <DA fc="OR" name="tOpOk" bType="Timestamp"/>
+         <DA dchg="true" fc="CF" name="ctlModel" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_ctlModel_dir_with_enh_sec_V09.60.01_V09.60.01">
+            <Val>direct-with-enhanced-security</Val>
+         </DA>
+         <DA dchg="true" fc="CF" name="operTimeout" bType="INT32U">
+            <Val>0</Val>
+         </DA>
+         <DA fc="CO" name="Oper" bType="Struct" type="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01"/>
+      </DOType>
+      <DOType id="ASG" cdc="ASG">
+         <DA name="setMag" fc="SP" dchg="true" type="AnalogueValue" bType="Struct"/>
+      </DOType>
+      <DOType id="ENS_Beh" cdc="ENS">
+         <DA name="stVal" bType="Enum" type="Beh" fc="ST" dchg="true" dupd="true"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+      </DOType>
+      <DOType id="ACD" cdc="ACD">
+         <DA name="general" bType="BOOLEAN" fc="ST" dchg="true"/>
+         <DA name="dirGeneral" bType="Enum" type="dir" fc="ST" dchg="true" desc="unknown | forward | backward | both"/>
+         <DA name="phsA" bType="BOOLEAN" fc="ST" dchg="true"/>
+         <DA name="dirPhsA" bType="Enum" type="dir" fc="ST" dchg="true" desc="unknown | forward | backward"/>
+         <DA name="phsB" bType="BOOLEAN" fc="ST" dchg="true"/>
+         <DA name="dirPhsB" bType="Enum" type="dir" fc="ST" dchg="true" desc="unknown | forward | backward"/>
+         <DA name="phsC" bType="BOOLEAN" fc="ST" dchg="true"/>
+         <DA name="dirPhsC" bType="Enum" type="dir" fc="ST" dchg="true" desc="unknown | forward | backward"/>
+         <DA name="neut" bType="BOOLEAN" fc="ST" dchg="true"/>
+         <DA name="dirNeut" bType="Enum" type="dir" fc="ST" dchg="true" desc="unknown | forward | backward"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+      </DOType>
+      <DOType id="ACT" cdc="ACT">
+         <DA name="general" bType="BOOLEAN" fc="ST" dchg="true"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+      </DOType>
+      <DOType id="ING" cdc="ING">
+         <DA name="setVal" fc="SP" dchg="true" bType="INT32"/>
+      </DOType>
+      <DOType id="LPL_LLN0" cdc="LPL">
+         <DA name="vendor" bType="VisString255" fc="DC"/>
+         <DA name="swRev" bType="VisString255" fc="DC"/>
+         <DA name="configRev" bType="VisString255" fc="DC"/>
+         <DA name="ldNs" bType="VisString255" fc="EX" desc="shall be included in LLN0 only;"/>
+      </DOType>
+      <DOType id="ENS_Health" cdc="ENS">
+         <DA name="stVal" bType="Enum" type="Health" fc="ST" dchg="true" dupd="true"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+      </DOType>
+      <DOType id="ENC_Mod" cdc="ENC">
+         <DA name="stVal" bType="Enum" type="Mod" fc="ST" dchg="true"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+         <DA name="ctlModel" bType="Enum" type="CtlModels" fc="CF" dchg="true"/>
+      </DOType>
+      <DOType id="SPS" cdc="SPS">
+         <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" desc="TRUE | FALSE"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+      </DOType>
+      <DOType id="INS" cdc="INS">
+         <DA name="stVal" bType="INT32" fc="ST" dchg="true" dupd="true"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+      </DOType>
+      <DOType id="DPC" cdc="DPC">
+         <DA name="stVal" bType="Dbpos" fc="ST" dchg="true" desc="intermediate-state | off | on | bad-state"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+         <DA name="ctlModel" bType="Enum" type="CtlModels" fc="CF" dchg="true"/>
+      </DOType>
+      <DOType id="SPC" cdc="SPC">
+         <DA name="stVal" bType="BOOLEAN" fc="ST" dchg="true" desc="FALSE | TRUE"/>
+         <DA name="q" bType="Quality" fc="ST" qchg="true"/>
+         <DA name="t" bType="Timestamp" fc="ST"/>
+         <DA name="ctlModel" bType="Enum" type="CtlModels" fc="CF" dchg="true"/>
+      </DOType>
+      <DAType id="SIPROTEC5_DAType_Units_1_V09.60.01_V09.60.01">
+         <BDA name="SIUnit" bType="Enum" valKind="RO" type="SIPROTEC5_EnType_SIUnit_V09.60.01_V09.60.01"/>
+         <BDA name="multiplier" bType="Enum" valKind="RO" type="SIPROTEC5_EnType_Multiplier_V09.60.01_V09.60.01"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01">
+         <BDA name="orCat" bType="Enum" type="SIPROTEC5_Textlist_orCategory_V09.60.01_V09.60.01"/>
+         <BDA name="orIdent" bType="Octet64"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Oper_Boolean_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="BOOLEAN"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <BDA name="Check" bType="Check"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Oper_Mod_OnBlockedTestTestBlocked_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="Enum" type="SIPROTEC5_Textlist_Behavior_OnBlockedTestTestBlocked_V09.60.01_V09.60.01"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <BDA name="Check" bType="Check"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_AnalogValue_INT32_V09.60.01_V09.60.01">
+         <BDA name="i" bType="INT32"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_ScaledValueConfig_readOnly_V09.60.01_V09.60.01">
+         <BDA name="scaleFactor" bType="FLOAT32" valKind="RO">
+            <Val>1</Val>
+         </BDA>
+         <BDA name="offset" bType="FLOAT32" valKind="RO">
+            <Val>0</Val>
+         </BDA>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_AnalogValue_INT32_readOnly_V09.60.01_V09.60.01">
+         <BDA name="i" bType="INT32" valKind="RO"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_CalendarTime_V09.60.01_V09.60.01">
+         <BDA name="occ" bType="INT16U"/>
+         <BDA name="occType" bType="Enum" type="SIPROTEC5_EnType_Cal_Occ_Type_V09.60.01_V09.60.01"/>
+         <BDA name="occPer" bType="Enum" type="SIPROTEC5_EnType_Cal_Occ_Period_V09.60.01_V09.60.01"/>
+         <BDA name="weekDay" bType="Enum" type="SIPROTEC5_EnType_Cal_WeekDay_V09.60.01_V09.60.01"/>
+         <BDA name="month" bType="Enum" type="SIPROTEC5_EnType_Cal_Month_V09.60.01_V09.60.01"/>
+         <BDA name="day" bType="INT8U"/>
+         <BDA name="hr" bType="INT8U"/>
+         <BDA name="mn" bType="INT8U"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Oper_Mod_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="Enum" type="SIPROTEC5_Textlist_Behavior_V09.60.01_V09.60.01"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <BDA name="Check" bType="Check"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01">
+         <BDA name="f" bType="FLOAT32" valKind="Set">
+            <Val>0</Val>
+         </BDA>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_AnalogValue_FLOAT32_readOnly_V09.60.01_V09.60.01">
+         <BDA name="f" bType="FLOAT32" valKind="RO">
+            <Val>0</Val>
+         </BDA>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Oper_Analog_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <BDA name="Check" bType="Check"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Cancel_Analog_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Oper_INT32_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="INT32"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <BDA name="Check" bType="Check"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_PulseConfig_XCBR_V09.60.01_V09.60.01">
+         <BDA name="cmdQual" bType="Enum" valKind="RO" type="SIPROTEC5_Textlist_PulseConfigCmdQual_V09.60.01_V09.60.01"/>
+         <BDA name="onDur" bType="INT32U" valKind="RO"/>
+         <BDA name="offDur" bType="INT32U" valKind="RO"/>
+         <BDA name="numPls" bType="INT32U" valKind="RO"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Cancel_Boolean_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="BOOLEAN"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Vector_V09.60.01_V09.60.01">
+         <BDA name="mag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+         <BDA name="ang" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Cancel_INT32_V09.60.01_V09.60.01">
+         <BDA name="ctlVal" bType="INT32"/>
+         <BDA name="origin" bType="Struct" type="SIPROTEC5_DAType_origin_V09.60.01_V09.60.01"/>
+         <BDA name="ctlNum" bType="INT8U"/>
+         <BDA name="T" bType="Timestamp"/>
+         <BDA name="Test" bType="BOOLEAN"/>
+         <ProtNs type="8-MMS">IEC 61850-8-1:2003</ProtNs>
+      </DAType>
+      <DAType id="SIPROTEC5_DAType_Vector_mag_V09.60.01_V09.60.01">
+         <BDA name="mag" bType="Struct" type="SIPROTEC5_DAType_AnalogValue_FLOAT32_V09.60.01_V09.60.01"/>
+      </DAType>
+      <DAType id="AnalogueValue">
+         <BDA name="f" bType="FLOAT32" desc="The value of f shall be the FLOAT representation of the measured value. f shall represent the technological value in SI units."/>
+      </DAType>
+      <EnumType id="SIPROTEC5_EnType_SIUnit_V09.60.01_V09.60.01">
+         <EnumVal ord="-40">ns</EnumVal>
+         <EnumVal ord="-39">&apos;</EnumVal>
+         <EnumVal ord="-38">kV/mA</EnumVal>
+         <EnumVal ord="-37">kA/V</EnumVal>
+         <EnumVal ord="-36">ohm/m</EnumVal>
+         <EnumVal ord="-35">ppm/°C</EnumVal>
+         <EnumVal ord="-34">F/m</EnumVal>
+         <EnumVal ord="-33">H/m</EnumVal>
+         <EnumVal ord="-32">ms/kPa</EnumVal>
+         <EnumVal ord="-31">kPa</EnumVal>
+         <EnumVal ord="-30">ms/V</EnumVal>
+         <EnumVal ord="-29">ms/K</EnumVal>
+         <EnumVal ord="-28">V/s</EnumVal>
+         <EnumVal ord="-27">I/Ir*s</EnumVal>
+         <EnumVal ord="-26">1/week</EnumVal>
+         <EnumVal ord="-25">1/d</EnumVal>
+         <EnumVal ord="-24">1/h</EnumVal>
+         <EnumVal ord="-23">1/min</EnumVal>
+         <EnumVal ord="-22">periods</EnumVal>
+         <EnumVal ord="-21">GB</EnumVal>
+         <EnumVal ord="-19">cycle</EnumVal>
+         <EnumVal ord="-18">mile</EnumVal>
+         <EnumVal ord="-17">inch</EnumVal>
+         <EnumVal ord="-16">°F</EnumVal>
+         <EnumVal ord="-15">I/IrObj</EnumVal>
+         <EnumVal ord="-14">MB</EnumVal>
+         <EnumVal ord="-13">KB</EnumVal>
+         <EnumVal ord="-12">Bytes</EnumVal>
+         <EnumVal ord="-11">p.u.</EnumVal>
+         <EnumVal ord="-10">day(s)</EnumVal>
+         <EnumVal ord="-7">%</EnumVal>
+         <EnumVal ord="-4">F/mi</EnumVal>
+         <EnumVal ord="-3">ohm/mi</EnumVal>
+         <EnumVal ord="-2">F/km</EnumVal>
+         <EnumVal ord="-1">ohm/km</EnumVal>
+         <EnumVal ord="1"/>
+         <EnumVal ord="2">m</EnumVal>
+         <EnumVal ord="3">kg</EnumVal>
+         <EnumVal ord="4">s</EnumVal>
+         <EnumVal ord="5">A</EnumVal>
+         <EnumVal ord="6">K</EnumVal>
+         <EnumVal ord="7">mol</EnumVal>
+         <EnumVal ord="8">cd</EnumVal>
+         <EnumVal ord="9">deg</EnumVal>
+         <EnumVal ord="10">rad</EnumVal>
+         <EnumVal ord="11">sr</EnumVal>
+         <EnumVal ord="21">Gy</EnumVal>
+         <EnumVal ord="23">°C</EnumVal>
+         <EnumVal ord="24">Sv</EnumVal>
+         <EnumVal ord="25">F</EnumVal>
+         <EnumVal ord="26">C</EnumVal>
+         <EnumVal ord="27">S</EnumVal>
+         <EnumVal ord="28">H</EnumVal>
+         <EnumVal ord="29">V</EnumVal>
+         <EnumVal ord="30">ohm</EnumVal>
+         <EnumVal ord="31">J</EnumVal>
+         <EnumVal ord="32">N</EnumVal>
+         <EnumVal ord="33">Hz</EnumVal>
+         <EnumVal ord="34">lx</EnumVal>
+         <EnumVal ord="35">Lm</EnumVal>
+         <EnumVal ord="36">Wb</EnumVal>
+         <EnumVal ord="37">T</EnumVal>
+         <EnumVal ord="38">W</EnumVal>
+         <EnumVal ord="39">Pa</EnumVal>
+         <EnumVal ord="41">m²</EnumVal>
+         <EnumVal ord="42">m³</EnumVal>
+         <EnumVal ord="43">m/s</EnumVal>
+         <EnumVal ord="44">m/s²</EnumVal>
+         <EnumVal ord="45">m³/s</EnumVal>
+         <EnumVal ord="46">m/m³</EnumVal>
+         <EnumVal ord="47">M</EnumVal>
+         <EnumVal ord="48">kg/m³</EnumVal>
+         <EnumVal ord="49">m²/s</EnumVal>
+         <EnumVal ord="50">W/m K</EnumVal>
+         <EnumVal ord="51">J/K</EnumVal>
+         <EnumVal ord="52">ppm</EnumVal>
+         <EnumVal ord="53">1/s</EnumVal>
+         <EnumVal ord="54">rad/s</EnumVal>
+         <EnumVal ord="55">W/m²</EnumVal>
+         <EnumVal ord="56">J/m²</EnumVal>
+         <EnumVal ord="57">S/m</EnumVal>
+         <EnumVal ord="58">K/s</EnumVal>
+         <EnumVal ord="59">Pa/s</EnumVal>
+         <EnumVal ord="60">J/kg K</EnumVal>
+         <EnumVal ord="61">VA</EnumVal>
+         <EnumVal ord="63">VAr</EnumVal>
+         <EnumVal ord="64">phi</EnumVal>
+         <EnumVal ord="65">cos(phi)</EnumVal>
+         <EnumVal ord="66">Vs</EnumVal>
+         <EnumVal ord="67">V²</EnumVal>
+         <EnumVal ord="68">As</EnumVal>
+         <EnumVal ord="69">A²</EnumVal>
+         <EnumVal ord="70">A²t</EnumVal>
+         <EnumVal ord="71">VAh</EnumVal>
+         <EnumVal ord="72">Wh</EnumVal>
+         <EnumVal ord="73">VArh</EnumVal>
+         <EnumVal ord="74">V/Hz</EnumVal>
+         <EnumVal ord="75">Hz/s</EnumVal>
+         <EnumVal ord="76">char</EnumVal>
+         <EnumVal ord="77">char/s</EnumVal>
+         <EnumVal ord="78">kgm²</EnumVal>
+         <EnumVal ord="79">dB</EnumVal>
+         <EnumVal ord="80">J/Wh</EnumVal>
+         <EnumVal ord="81">W/s</EnumVal>
+         <EnumVal ord="82">l/s</EnumVal>
+         <EnumVal ord="83">dBm</EnumVal>
+         <EnumVal ord="84">h</EnumVal>
+         <EnumVal ord="85">min</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_Multiplier_V09.60.01_V09.60.01">
+         <EnumVal ord="-24">y</EnumVal>
+         <EnumVal ord="-21">z</EnumVal>
+         <EnumVal ord="-18">a</EnumVal>
+         <EnumVal ord="-15">f</EnumVal>
+         <EnumVal ord="-12">p</EnumVal>
+         <EnumVal ord="-9">n</EnumVal>
+         <EnumVal ord="-6">µ</EnumVal>
+         <EnumVal ord="-3">m</EnumVal>
+         <EnumVal ord="-2">c</EnumVal>
+         <EnumVal ord="-1">d</EnumVal>
+         <EnumVal ord="0"/>
+         <EnumVal ord="1">da</EnumVal>
+         <EnumVal ord="2">h</EnumVal>
+         <EnumVal ord="3">k</EnumVal>
+         <EnumVal ord="6">M</EnumVal>
+         <EnumVal ord="9">G</EnumVal>
+         <EnumVal ord="12">T</EnumVal>
+         <EnumVal ord="15">P</EnumVal>
+         <EnumVal ord="18">E</EnumVal>
+         <EnumVal ord="21">Z</EnumVal>
+         <EnumVal ord="24">Y</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_SpecificSwitchingAuthorityLevel_V09.60.01_V09.60.01">
+         <EnumVal ord="3">station</EnumVal>
+         <EnumVal ord="4">station/remote</EnumVal>
+         <EnumVal ord="5">remote</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ResCmpFmt_V09.60.01_V09.60.01">
+         <EnumVal ord="0">RERL_XEXL</EnumVal>
+         <EnumVal ord="1">K0</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_SwitchingMode_V09.60.01_V09.60.01">
+         <EnumVal ord="0">not relevant</EnumVal>
+         <EnumVal ord="1">interlocked</EnumVal>
+         <EnumVal ord="2">non-interlocked</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_SwitchingAuthority_LocalDigsiStationRemote_V09.60.01_V09.60.01">
+         <EnumVal ord="0">local</EnumVal>
+         <EnumVal ord="1">DIGSI</EnumVal>
+         <EnumVal ord="2">local/station</EnumVal>
+         <EnumVal ord="3">station</EnumVal>
+         <EnumVal ord="4">station/remote</EnumVal>
+         <EnumVal ord="5">remote</EnumVal>
+         <EnumVal ord="6">local/station/remote</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Health_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Ok</EnumVal>
+         <EnumVal ord="2">Warning</EnumVal>
+         <EnumVal ord="3">Alarm</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_orCategory_V09.60.01_V09.60.01">
+         <EnumVal ord="0">not-supported</EnumVal>
+         <EnumVal ord="1">bay-control</EnumVal>
+         <EnumVal ord="2">station-control</EnumVal>
+         <EnumVal ord="3">remote-control</EnumVal>
+         <EnumVal ord="4">automatic-bay</EnumVal>
+         <EnumVal ord="5">automatic-station</EnumVal>
+         <EnumVal ord="6">automatic-remote</EnumVal>
+         <EnumVal ord="7">maintenance</EnumVal>
+         <EnumVal ord="8">process</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ctlModel_dir_with_enh_sec_V09.60.01_V09.60.01">
+         <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ctlModel_dir_with_nor_sec_V09.60.01_V09.60.01">
+         <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Behavior_V09.60.01_V09.60.01">
+         <EnumVal ord="1">on</EnumVal>
+         <EnumVal ord="2">blocked</EnumVal>
+         <EnumVal ord="3">test</EnumVal>
+         <EnumVal ord="4">test/blocked</EnumVal>
+         <EnumVal ord="5">off</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Behavior_OnBlockedTestTestBlocked_V09.60.01_V09.60.01">
+         <EnumVal ord="1">on</EnumVal>
+         <EnumVal ord="2">blocked</EnumVal>
+         <EnumVal ord="3">test</EnumVal>
+         <EnumVal ord="4">test/blocked</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_Login_V09.60.01_V09.60.01">
+         <EnumVal ord="0">invalid</EnumVal>
+         <EnumVal ord="1">logon blocked</EnumVal>
+         <EnumVal ord="2">logon reactivated</EnumVal>
+         <EnumVal ord="3">PW change OK</EnumVal>
+         <EnumVal ord="4">PW change failed</EnumVal>
+         <EnumVal ord="5">logon OK</EnumVal>
+         <EnumVal ord="6">logon failed</EnumVal>
+         <EnumVal ord="7">activation of connection PW OK</EnumVal>
+         <EnumVal ord="8">activation of connection PW failed</EnumVal>
+         <EnumVal ord="9">deactivation of connection PW OK</EnumVal>
+         <EnumVal ord="10">deactivation of connection PW failed</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_ErrOffset_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Offset error at board 1 on</EnumVal>
+         <EnumVal ord="2">Offset error at board 2 on</EnumVal>
+         <EnumVal ord="3">Offset error at board 3 on</EnumVal>
+         <EnumVal ord="4">Offset error at board 4 on</EnumVal>
+         <EnumVal ord="5">Offset error at board 5 on</EnumVal>
+         <EnumVal ord="6">Offset error at board 6 on</EnumVal>
+         <EnumVal ord="7">Offset error at board 7 on</EnumVal>
+         <EnumVal ord="8">Offset error at board 8 on</EnumVal>
+         <EnumVal ord="9">Offset error at board 9 on</EnumVal>
+         <EnumVal ord="10">Offset error at board 10 on</EnumVal>
+         <EnumVal ord="11">Offset error at board 11 on</EnumVal>
+         <EnumVal ord="12">Offset error at board 12 on</EnumVal>
+         <EnumVal ord="13">Offset error at board 1 off</EnumVal>
+         <EnumVal ord="14">Offset error at board 2 off</EnumVal>
+         <EnumVal ord="15">Offset error at board 3 off</EnumVal>
+         <EnumVal ord="16">Offset error at board 4 off</EnumVal>
+         <EnumVal ord="17">Offset error at board 5 off</EnumVal>
+         <EnumVal ord="18">Offset error at board 6 off</EnumVal>
+         <EnumVal ord="19">Offset error at board 7 off</EnumVal>
+         <EnumVal ord="20">Offset error at board 8 off</EnumVal>
+         <EnumVal ord="21">Offset error at board 9 off</EnumVal>
+         <EnumVal ord="22">Offset error at board 10 off</EnumVal>
+         <EnumVal ord="23">Offset error at board 11 off</EnumVal>
+         <EnumVal ord="24">Offset error at board 12 off</EnumVal>
+         <EnumVal ord="25">No offset error</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_ErrComp_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Comp. err. Brd1/Term1</EnumVal>
+         <EnumVal ord="2">Comp. err. Brd1/Term2</EnumVal>
+         <EnumVal ord="3">Comp. err. Brd2/Term1</EnumVal>
+         <EnumVal ord="4">Comp. err. Brd2/Term2</EnumVal>
+         <EnumVal ord="5">Comp. err. Brd3/Term1</EnumVal>
+         <EnumVal ord="6">Comp. err. Brd3/Term2</EnumVal>
+         <EnumVal ord="7">Comp. err. Brd4/Term1</EnumVal>
+         <EnumVal ord="8">Comp. err. Brd4/Term2</EnumVal>
+         <EnumVal ord="9">Comp. err. Brd5/Term1</EnumVal>
+         <EnumVal ord="10">Comp. err. Brd5/Term2</EnumVal>
+         <EnumVal ord="11">Comp. err. Brd6/Term1</EnumVal>
+         <EnumVal ord="12">Comp. err. Brd6/Term2</EnumVal>
+         <EnumVal ord="13">Comp. err. Brd7/Term1</EnumVal>
+         <EnumVal ord="14">Comp. err. Brd7/Term2</EnumVal>
+         <EnumVal ord="15">Comp. err. Brd8/Term1</EnumVal>
+         <EnumVal ord="16">Comp. err. Brd8/Term2</EnumVal>
+         <EnumVal ord="17">Comp. err. Brd9/Term1</EnumVal>
+         <EnumVal ord="18">Comp. err. Brd9/Term2</EnumVal>
+         <EnumVal ord="19">Comp. err. Brd10/Term1</EnumVal>
+         <EnumVal ord="20">Comp. err. Brd10/Term2</EnumVal>
+         <EnumVal ord="21">Comp. err. Brd11/Term1</EnumVal>
+         <EnumVal ord="22">Comp. err. Brd11/Term2</EnumVal>
+         <EnumVal ord="23">Comp. err. Brd12/Term1</EnumVal>
+         <EnumVal ord="24">Comp. err. Brd12/Term2</EnumVal>
+         <EnumVal ord="25">Comp. err. Brd1</EnumVal>
+         <EnumVal ord="26">Comp. err. Brd2</EnumVal>
+         <EnumVal ord="27">Comp. err. Brd3</EnumVal>
+         <EnumVal ord="28">Comp. err. Brd4</EnumVal>
+         <EnumVal ord="29">Comp. err. Brd5</EnumVal>
+         <EnumVal ord="30">Comp. err. Brd6</EnumVal>
+         <EnumVal ord="31">Comp. err. Brd7</EnumVal>
+         <EnumVal ord="32">Comp. err. Brd8</EnumVal>
+         <EnumVal ord="33">Comp. err. Brd9</EnumVal>
+         <EnumVal ord="34">Comp. err. Brd10</EnumVal>
+         <EnumVal ord="35">Comp. err. Brd11</EnumVal>
+         <EnumVal ord="36">Comp. err. Brd12</EnumVal>
+         <EnumVal ord="37">Compensation err. free.</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_ErrMeasT_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Error Meas. Trans. 1</EnumVal>
+         <EnumVal ord="2">Error Meas. Trans. 2</EnumVal>
+         <EnumVal ord="3">Error Meas. Trans. 3</EnumVal>
+         <EnumVal ord="4">Error Meas. Trans. 4</EnumVal>
+         <EnumVal ord="5">Error Meas. Trans. 5</EnumVal>
+         <EnumVal ord="6">Meas. Transd. 1..5 no error</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ctlModel_status_only_V09.60.01_V09.60.01">
+         <EnumVal ord="0">status-only</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_DateFormat_V09.60.01_V09.60.01">
+         <EnumVal ord="0">DD.MM.YYYY</EnumVal>
+         <EnumVal ord="1">MM/DD/YYYY</EnumVal>
+         <EnumVal ord="2">YYYY-MM-DD</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_Cal_Occ_Type_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Time</EnumVal>
+         <EnumVal ord="1">WeekDay</EnumVal>
+         <EnumVal ord="2">WeekOfYear</EnumVal>
+         <EnumVal ord="3">DayOfMonth</EnumVal>
+         <EnumVal ord="4">DayOfYear</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_Cal_Occ_Period_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Hour</EnumVal>
+         <EnumVal ord="1">Day</EnumVal>
+         <EnumVal ord="2">Week</EnumVal>
+         <EnumVal ord="3">Month</EnumVal>
+         <EnumVal ord="4">Year</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_Cal_WeekDay_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Monday</EnumVal>
+         <EnumVal ord="2">Tuesday</EnumVal>
+         <EnumVal ord="3">Wednesday</EnumVal>
+         <EnumVal ord="4">Thursday</EnumVal>
+         <EnumVal ord="5">Friday</EnumVal>
+         <EnumVal ord="6">Saturday</EnumVal>
+         <EnumVal ord="7">Sunday</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_Cal_Month_V09.60.01_V09.60.01">
+         <EnumVal ord="1">January</EnumVal>
+         <EnumVal ord="2">February</EnumVal>
+         <EnumVal ord="3">March</EnumVal>
+         <EnumVal ord="4">April</EnumVal>
+         <EnumVal ord="5">May</EnumVal>
+         <EnumVal ord="6">June</EnumVal>
+         <EnumVal ord="7">July</EnumVal>
+         <EnumVal ord="8">August</EnumVal>
+         <EnumVal ord="9">September</EnumVal>
+         <EnumVal ord="10">October</EnumVal>
+         <EnumVal ord="11">November</EnumVal>
+         <EnumVal ord="12">December</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_TmZnTmSrc_V09.60.01_V09.60.01">
+         <EnumVal ord="0">UTC</EnumVal>
+         <EnumVal ord="1">local</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_TmSrcCh_V09.60.01_V09.60.01">
+         <EnumVal ord="0">NotUsed</EnumVal>
+         <EnumVal ord="1">Ch1</EnumVal>
+         <EnumVal ord="2">Ch2</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Ports_V09.60.01_V09.60.01">
+         <EnumVal ord="0">PortJ</EnumVal>
+         <EnumVal ord="1">PortF</EnumVal>
+         <EnumVal ord="2">PortE</EnumVal>
+         <EnumVal ord="3">PortP</EnumVal>
+         <EnumVal ord="4">PortN</EnumVal>
+         <EnumVal ord="5">PortG</EnumVal>
+         <EnumVal ord="6">NotUsed</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_TmSrcStd_V09.60.01_V09.60.01">
+         <EnumVal ord="0">none</EnumVal>
+         <EnumVal ord="1">PPM</EnumVal>
+         <EnumVal ord="2">IRIGB</EnumVal>
+         <EnumVal ord="3">DCF77</EnumVal>
+         <EnumVal ord="4">Syncbox</EnumVal>
+         <EnumVal ord="5">PI</EnumVal>
+         <EnumVal ord="6">SNTP</EnumVal>
+         <EnumVal ord="7">T103</EnumVal>
+         <EnumVal ord="8">Profibus</EnumVal>
+         <EnumVal ord="9">Modbus</EnumVal>
+         <EnumVal ord="10">DNP3</EnumVal>
+         <EnumVal ord="11">IEEE1588</EnumVal>
+         <EnumVal ord="12">T104</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_TmSrcTyp_V09.60.01_V09.60.01">
+         <EnumVal ord="-15">ERR</EnumVal>
+         <EnumVal ord="-14">T104</EnumVal>
+         <EnumVal ord="-13">T103</EnumVal>
+         <EnumVal ord="-12">RTC</EnumVal>
+         <EnumVal ord="-11">IEEE1588</EnumVal>
+         <EnumVal ord="-10">EXTERN_SIPROTEC</EnumVal>
+         <EnumVal ord="-9">MINUTE_PULS</EnumVal>
+         <EnumVal ord="-8">DNP30</EnumVal>
+         <EnumVal ord="-7">MODBUS</EnumVal>
+         <EnumVal ord="-6">PROFIBUS</EnumVal>
+         <EnumVal ord="-5">GALILEO</EnumVal>
+         <EnumVal ord="-4">SYNC_BOX</EnumVal>
+         <EnumVal ord="-3">DCF77</EnumVal>
+         <EnumVal ord="-2">GPS</EnumVal>
+         <EnumVal ord="-1">HMI</EnumVal>
+         <EnumVal ord="1">Unknown</EnumVal>
+         <EnumVal ord="2">SNTP</EnumVal>
+         <EnumVal ord="3">PTP</EnumVal>
+         <EnumVal ord="4">IRIG-B</EnumVal>
+         <EnumVal ord="5">Substation internal</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ServiceType_V09.60.01_V09.60.01">
+         <EnumVal ord="-3">CancelEditSG</EnumVal>
+         <EnumVal ord="-2">None</EnumVal>
+         <EnumVal ord="-1">Deprecated</EnumVal>
+         <EnumVal ord="0">Unknown</EnumVal>
+         <EnumVal ord="1">Associate</EnumVal>
+         <EnumVal ord="2">Abort</EnumVal>
+         <EnumVal ord="3">Release</EnumVal>
+         <EnumVal ord="4">GetServerDirectory</EnumVal>
+         <EnumVal ord="5">GetLogicalDeviceDirectory</EnumVal>
+         <EnumVal ord="6">GetAllDataValues</EnumVal>
+         <EnumVal ord="7">GetDataValues</EnumVal>
+         <EnumVal ord="8">SetDataValues</EnumVal>
+         <EnumVal ord="9">GetDataDirectory</EnumVal>
+         <EnumVal ord="10">GetDataDefinition</EnumVal>
+         <EnumVal ord="11">GetDataSetValues</EnumVal>
+         <EnumVal ord="12">SetDataSetValues</EnumVal>
+         <EnumVal ord="13">CreateDataSet</EnumVal>
+         <EnumVal ord="14">DeleteDataSet</EnumVal>
+         <EnumVal ord="15">GetDataSetDirectory</EnumVal>
+         <EnumVal ord="16">SelectActiveSG</EnumVal>
+         <EnumVal ord="17">SelectEditSG</EnumVal>
+         <EnumVal ord="18">SetEditSGValue</EnumVal>
+         <EnumVal ord="19">ConfirmEditSGValues</EnumVal>
+         <EnumVal ord="20">GetEditSGValue</EnumVal>
+         <EnumVal ord="21">GetSGCBValues</EnumVal>
+         <EnumVal ord="22">Report</EnumVal>
+         <EnumVal ord="23">GetBRCBValues</EnumVal>
+         <EnumVal ord="24">SetBRCBValues</EnumVal>
+         <EnumVal ord="25">GetURCBValues</EnumVal>
+         <EnumVal ord="26">SetURCBValues</EnumVal>
+         <EnumVal ord="27">GetLCBValues</EnumVal>
+         <EnumVal ord="28">SetLCBValues</EnumVal>
+         <EnumVal ord="29">QueryLogByTime</EnumVal>
+         <EnumVal ord="30">QueryLogAfter</EnumVal>
+         <EnumVal ord="31">GetLogStatusValues</EnumVal>
+         <EnumVal ord="32">SendGOOSEMessage</EnumVal>
+         <EnumVal ord="33">GetGoCBValues</EnumVal>
+         <EnumVal ord="34">SetGoCBValues</EnumVal>
+         <EnumVal ord="35">GetGoReference</EnumVal>
+         <EnumVal ord="36">GetGOOSEElementNumber</EnumVal>
+         <EnumVal ord="37">SendMSVMessage</EnumVal>
+         <EnumVal ord="38">GetMSVCBValues</EnumVal>
+         <EnumVal ord="39">SetMSVCBValues</EnumVal>
+         <EnumVal ord="40">SendUSVMessage</EnumVal>
+         <EnumVal ord="41">GetUSVCBValues</EnumVal>
+         <EnumVal ord="42">SetUSVCBValues</EnumVal>
+         <EnumVal ord="43">Select</EnumVal>
+         <EnumVal ord="44">SelectWithValue</EnumVal>
+         <EnumVal ord="45">Cancel</EnumVal>
+         <EnumVal ord="46">Operate</EnumVal>
+         <EnumVal ord="47">CommandTermination</EnumVal>
+         <EnumVal ord="48">TimeActivatedOperate</EnumVal>
+         <EnumVal ord="49">GetFile</EnumVal>
+         <EnumVal ord="50">SetFile</EnumVal>
+         <EnumVal ord="51">DeleteFile</EnumVal>
+         <EnumVal ord="52">GetFileAttributeValues</EnumVal>
+         <EnumVal ord="53">TimeSynchronization</EnumVal>
+         <EnumVal ord="54">InternalChange</EnumVal>
+         <EnumVal ord="55">GetLogicalNodeDirectory</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ServiceError_V09.60.01_V09.60.01">
+         <EnumVal ord="0">no-error</EnumVal>
+         <EnumVal ord="1">instance-not-available</EnumVal>
+         <EnumVal ord="2">instance-in-use</EnumVal>
+         <EnumVal ord="3">access-violation</EnumVal>
+         <EnumVal ord="4">access-not-allowed-in-current-state</EnumVal>
+         <EnumVal ord="5">parameter-value-inappropriate</EnumVal>
+         <EnumVal ord="6">parameter-value-inconsistent</EnumVal>
+         <EnumVal ord="7">class-not-supported</EnumVal>
+         <EnumVal ord="8">instance-locked-by-other-client</EnumVal>
+         <EnumVal ord="9">control-must-be-selected</EnumVal>
+         <EnumVal ord="10">type-conflict</EnumVal>
+         <EnumVal ord="11">failed-due-to-communications-constraint</EnumVal>
+         <EnumVal ord="12">failed-due-to-server-constraint</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ctlModel_status_only_and_dir_with_nor_sec_V09.60.01_V09.60.01">
+         <EnumVal ord="0">status-only</EnumVal>
+         <EnumVal ord="1">direct-with-normal-security</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_OpModeRBRF_V09.60.01_V09.60.01">
+         <EnumVal ord="1">unbalancing</EnumVal>
+         <EnumVal ord="2">I&gt; query</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_No_Yes_V09.60.01_V09.60.01">
+         <EnumVal ord="0">no</EnumVal>
+         <EnumVal ord="1">yes</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ResetTrip_V09.60.01_V09.60.01">
+         <EnumVal ord="0">accelarated</EnumVal>
+         <EnumVal ord="1">safe</EnumVal>
+         <EnumVal ord="2">directly</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_3poleCoupling_V09.60.01_V09.60.01">
+         <EnumVal ord="0">with pickup</EnumVal>
+         <EnumVal ord="1">with trip</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Trip2phFault_V09.60.01_V09.60.01">
+         <EnumVal ord="0">3-pole</EnumVal>
+         <EnumVal ord="1">1-pole, leading phase</EnumVal>
+         <EnumVal ord="2">1-pole, lagging phase</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_DirectionGeneral_V09.60.01_V09.60.01">
+         <EnumVal ord="0">unknown</EnumVal>
+         <EnumVal ord="1">forward</EnumVal>
+         <EnumVal ord="2">backward</EnumVal>
+         <EnumVal ord="3">both</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_DirectionPhase_V09.60.01_V09.60.01">
+         <EnumVal ord="0">unknown</EnumVal>
+         <EnumVal ord="1">forward</EnumVal>
+         <EnumVal ord="2">backward</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Always_WithTrip_V09.60.01_V09.60.01">
+         <EnumVal ord="0">with trip</EnumVal>
+         <EnumVal ord="1">always</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_sboClass_V09.60.01_V09.60.01">
+         <EnumVal ord="0">operate-once</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_POWCap_V09.60.01_V09.60.01">
+         <EnumVal ord="1">None</EnumVal>
+         <EnumVal ord="2">Close</EnumVal>
+         <EnumVal ord="3">Open</EnumVal>
+         <EnumVal ord="4">Close and Open</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_PulseConfigCmdQual_V09.60.01_V09.60.01">
+         <EnumVal ord="0">pulse</EnumVal>
+         <EnumVal ord="1">persistent</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_No_Yes_Advanced_V09.60.01_V09.60.01">
+         <EnumVal ord="0">no</EnumVal>
+         <EnumVal ord="1">yes</EnumVal>
+         <EnumVal ord="2">Advanced</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ctlModel_V09.60.01_V09.60.01">
+         <EnumVal ord="0">status-only</EnumVal>
+         <EnumVal ord="1">direct-with-normal-security</EnumVal>
+         <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+         <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+         <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CBT_TstCnc_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Inactive</EnumVal>
+         <EnumVal ord="1">Fault occurred</EnumVal>
+         <EnumVal ord="2">CB not closed</EnumVal>
+         <EnumVal ord="3">CB not ready</EnumVal>
+         <EnumVal ord="4">CB stayed closed</EnumVal>
+         <EnumVal ord="5">Command</EnumVal>
+         <EnumVal ord="6">Current crit.</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CBT_TstCls_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Inactive</EnumVal>
+         <EnumVal ord="1">3-pole</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CBT_TstTr_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Inactive</EnumVal>
+         <EnumVal ord="1">1-pole phsA</EnumVal>
+         <EnumVal ord="2">1-pole phsB</EnumVal>
+         <EnumVal ord="3">1-pole phsC</EnumVal>
+         <EnumVal ord="4">3-pole</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CBT_TstExec_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Inactive</EnumVal>
+         <EnumVal ord="1">Started</EnumVal>
+         <EnumVal ord="2">Failed</EnumVal>
+         <EnumVal ord="3">Successful</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ClcMth_V09.60.01_V09.60.01">
+         <EnumVal ord="1">UNSPECIFIED</EnumVal>
+         <EnumVal ord="2">TRUE_RMS</EnumVal>
+         <EnumVal ord="3">PEAK_FUNDAMENTAL</EnumVal>
+         <EnumVal ord="4">RMS_FUNDAMENTAL</EnumVal>
+         <EnumVal ord="5">MIN</EnumVal>
+         <EnumVal ord="6">MAX</EnumVal>
+         <EnumVal ord="7">AVG</EnumVal>
+         <EnumVal ord="8">SDV</EnumVal>
+         <EnumVal ord="9">PREDICTION</EnumVal>
+         <EnumVal ord="10">RATE</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_PQ_Sign_V09.60.01_V09.60.01">
+         <EnumVal ord="0">not reversed</EnumVal>
+         <EnumVal ord="1">reversed</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_System_Neutralpoint_V09.60.01_V09.60.01">
+         <EnumVal ord="0">grounded</EnumVal>
+         <EnumVal ord="1">ptcoil</EnumVal>
+         <EnumVal ord="2">isolated</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_On_Off_V09.60.01_V09.60.01">
+         <EnumVal ord="0">off</EnumVal>
+         <EnumVal ord="1">on</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_DisRM_PolSet_V09.60.01_V09.60.01">
+         <EnumVal ord="1">I2</EnumVal>
+         <EnumVal ord="2">I0</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_PickupTrip_FL_V09.60.01_V09.60.01">
+         <EnumVal ord="0">withOp</EnumVal>
+         <EnumVal ord="1">withStr</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Mode_V09.60.01_V09.60.01">
+         <EnumVal ord="5">Off</EnumVal>
+         <EnumVal ord="1">On</EnumVal>
+         <EnumVal ord="3">Test</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_FltLoop_V09.60.01_V09.60.01">
+         <EnumVal ord="1">PhaseAtoGround</EnumVal>
+         <EnumVal ord="2">PhaseBtoGround</EnumVal>
+         <EnumVal ord="3">PhaseCtoGround</EnumVal>
+         <EnumVal ord="4">PhaseAtoB</EnumVal>
+         <EnumVal ord="5">PhaseBtoC</EnumVal>
+         <EnumVal ord="6">PhaseCtoA</EnumVal>
+         <EnumVal ord="7">Others</EnumVal>
+         <EnumVal ord="-1">Off</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_StartMode_V09.60.01_V09.60.01">
+         <EnumVal ord="0">OneOfThree</EnumVal>
+         <EnumVal ord="1">ThreeOfThree</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_FundComp_TrRMS_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Fundcomp</EnumVal>
+         <EnumVal ord="1">TrueRMS</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_PhGnd_PhPh_V09.60.01_V09.60.01">
+         <EnumVal ord="0">PhaseToGround</EnumVal>
+         <EnumVal ord="1">PhaseToPhase</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_SEQtype_V09.60.01_V09.60.01">
+         <EnumVal ord="0">pos-neg-zero</EnumVal>
+         <EnumVal ord="1">dir-quad-zero</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_StateRecognition_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Manual close only</EnumVal>
+         <EnumVal ord="3">I and U</EnumVal>
+         <EnumVal ord="4">CB and I</EnumVal>
+         <EnumVal ord="2">I</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_OpenPoleDetector_V09.60.01_V09.60.01">
+         <EnumVal ord="1">off</EnumVal>
+         <EnumVal ord="2">with measurement</EnumVal>
+         <EnumVal ord="3">CB and I</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_1588_PTPProfile_V09.60.01_V09.62.01">
+         <EnumVal ord="1">IEC 61850-9-3:2016</EnumVal>
+         <EnumVal ord="2">IEEE C37.238:2017</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_1588_ClockType_V09.60.01_V09.62.01">
+         <EnumVal ord="1">Ordinary Clock</EnumVal>
+         <EnumVal ord="2">OCSO and P2P TC</EnumVal>
+         <EnumVal ord="3">P2P TC</EnumVal>
+         <EnumVal ord="4">OCGC</EnumVal>
+         <EnumVal ord="5">OCGC and P2P TC</EnumVal>
+         <EnumVal ord="6">OCGC,OCSO</EnumVal>
+         <EnumVal ord="7">OCGC,OCSO,P2PTC</EnumVal>
+         <EnumVal ord="0">None</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_PhaseSequence_V09.60.01_V09.60.01">
+         <EnumVal ord="0">ABC</EnumVal>
+         <EnumVal ord="1">ACB</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ActiveInactive_V09.60.01_V09.60.01">
+         <EnumVal ord="0">inactive</EnumVal>
+         <EnumVal ord="1">active</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_AInternTyp_V09.60.01_V09.60.01">
+         <EnumVal ord="0">CT Protection</EnumVal>
+         <EnumVal ord="1">CT Measurement</EnumVal>
+         <EnumVal ord="2">CT Protection Light</EnumVal>
+         <EnumVal ord="3">CT Measurement Light</EnumVal>
+         <EnumVal ord="4">CT Processbus</EnumVal>
+         <EnumVal ord="5">CT PBClient BD</EnumVal>
+         <EnumVal ord="6">CT LPCT Protection</EnumVal>
+         <EnumVal ord="7">CT LPCT Measurement</EnumVal>
+         <EnumVal ord="8">LPIT Universal</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_AMeasRange_V09.60.01_V09.60.01">
+         <EnumVal ord="1">1.6 x IR</EnumVal>
+         <EnumVal ord="2">8 x IR</EnumVal>
+         <EnumVal ord="3">20 x IR</EnumVal>
+         <EnumVal ord="4">100 x IR</EnumVal>
+         <EnumVal ord="5">50 x IR</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_ArtgSec_V09.60.01_V09.60.01">
+         <EnumVal ord="1">1A</EnumVal>
+         <EnumVal ord="5">5A</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CTConnect_V09.60.01_V09.60.01">
+         <EnumVal ord="0">not assigned</EnumVal>
+         <EnumVal ord="1">3-phase + IN</EnumVal>
+         <EnumVal ord="2">3-phase</EnumVal>
+         <EnumVal ord="3">3-phase + IN-separate</EnumVal>
+         <EnumVal ord="5">3-phase, 2 primary CT</EnumVal>
+         <EnumVal ord="6">3ph,2prim.CT + IN-sep</EnumVal>
+         <EnumVal ord="8">2ph, 2p. CT + IN-sep</EnumVal>
+         <EnumVal ord="11">2-phase + IN</EnumVal>
+         <EnumVal ord="12">2-phase</EnumVal>
+         <EnumVal ord="13">2ph,2p.CT + 2IN-sep</EnumVal>
+         <EnumVal ord="15">I Overhead</EnumVal>
+         <EnumVal ord="16">I pF, I nF</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_InvertedPh_V09.60.01_V09.60.01">
+         <EnumVal ord="0">None</EnumVal>
+         <EnumVal ord="1">A-C</EnumVal>
+         <EnumVal ord="2">B-C</EnumVal>
+         <EnumVal ord="3">A-B</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_InstrumentTransformerProtectionRatingKind_V09.60.01_V09.60.01">
+         <EnumVal ord="1">1</EnumVal>
+         <EnumVal ord="2">2</EnumVal>
+         <EnumVal ord="3">3</EnumVal>
+         <EnumVal ord="4">5</EnumVal>
+         <EnumVal ord="5">6</EnumVal>
+         <EnumVal ord="6">10</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_EnType_InstrumentTransformerMeasurementRatingKind_V09.60.01_V09.60.01">
+         <EnumVal ord="1">0.05</EnumVal>
+         <EnumVal ord="2">0.1</EnumVal>
+         <EnumVal ord="3">0.2</EnumVal>
+         <EnumVal ord="4">0.2S</EnumVal>
+         <EnumVal ord="5">0.5</EnumVal>
+         <EnumVal ord="6">0.5S</EnumVal>
+         <EnumVal ord="7">1</EnumVal>
+         <EnumVal ord="8">3</EnumVal>
+         <EnumVal ord="9">5</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Trp_V09.60.01_V09.60.01">
+         <EnumVal ord="1">Unknown</EnumVal>
+         <EnumVal ord="2">P</EnumVal>
+         <EnumVal ord="3">PR</EnumVal>
+         <EnumVal ord="4">PX</EnumVal>
+         <EnumVal ord="5">PXR</EnumVal>
+         <EnumVal ord="6">TPX</EnumVal>
+         <EnumVal ord="7">TPY</EnumVal>
+         <EnumVal ord="8">TPZ</EnumVal>
+         <EnumVal ord="9">TPE</EnumVal>
+         <EnumVal ord="10">TPS</EnumVal>
+         <EnumVal ord="11">TPM</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_BlkMod_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Blocking</EnumVal>
+         <EnumVal ord="1">Auto blocking</EnumVal>
+         <EnumVal ord="2">Not blocking</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_VTConnect_V09.60.01_V09.60.01">
+         <EnumVal ord="0">not assigned</EnumVal>
+         <EnumVal ord="1">3 ph-to-gnd volt. + VN</EnumVal>
+         <EnumVal ord="2">3 ph-to-gnd voltages</EnumVal>
+         <EnumVal ord="3">3 ph-to-ph volt. + VN</EnumVal>
+         <EnumVal ord="4">3 ph-to-ph voltages</EnumVal>
+         <EnumVal ord="5">2 ph-to-ph volt. + VN</EnumVal>
+         <EnumVal ord="6">2 ph-to-ph voltages</EnumVal>
+         <EnumVal ord="7">2 ph-to-gnd volt. + VN</EnumVal>
+         <EnumVal ord="8">2 ph-to-gnd voltages</EnumVal>
+         <EnumVal ord="9">V Overhead</EnumVal>
+         <EnumVal ord="10">V pF, V nF</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CRevYear_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Comtrade 1999</EnumVal>
+         <EnumVal ord="1">Comtrade 2013</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CtdValType_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Primary values</EnumVal>
+         <EnumVal ord="1">Secondary values</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_Behavior_Test_V09.60.01_V09.60.01">
+         <EnumVal ord="1">on</EnumVal>
+         <EnumVal ord="3">test</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CalcVNChannel_V09.60.01_V09.60.01">
+         <EnumVal ord="0">No</EnumVal>
+         <EnumVal ord="1">V0</EnumVal>
+         <EnumVal ord="2">3V0</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_CalcINChannel_V09.60.01_V09.60.01">
+         <EnumVal ord="0">No</EnumVal>
+         <EnumVal ord="1">-3I0</EnumVal>
+         <EnumVal ord="2">3I0</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_SmpRate_V09.60.01_V09.60.01">
+         <EnumVal ord="0">8 kHz</EnumVal>
+         <EnumVal ord="1">4 kHz</EnumVal>
+         <EnumVal ord="2">2 kHz</EnumVal>
+         <EnumVal ord="3">1 kHz</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_RcdStore_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Store without release</EnumVal>
+         <EnumVal ord="1">Store with trip</EnumVal>
+      </EnumType>
+      <EnumType id="SIPROTEC5_Textlist_RcdStart_V09.60.01_V09.60.01">
+         <EnumVal ord="0">Start with pickup</EnumVal>
+         <EnumVal ord="1">Start with pickup and AR</EnumVal>
+         <EnumVal ord="2">Start with flexible signal</EnumVal>
+      </EnumType>
+      <EnumType id="Beh">
+         <EnumVal ord="1">on</EnumVal>
+         <EnumVal ord="2">blocked</EnumVal>
+         <EnumVal ord="3">test</EnumVal>
+         <EnumVal ord="4">test/blocked</EnumVal>
+         <EnumVal ord="5">off</EnumVal>
+      </EnumType>
+      <EnumType id="dir">
+         <EnumVal ord="0">unknown</EnumVal>
+         <EnumVal ord="1">forward</EnumVal>
+         <EnumVal ord="2">backward</EnumVal>
+         <EnumVal ord="3">both</EnumVal>
+      </EnumType>
+      <EnumType id="Health">
+         <EnumVal ord="1">Ok</EnumVal>
+         <EnumVal ord="2">Warning</EnumVal>
+         <EnumVal ord="3">Alarm</EnumVal>
+      </EnumType>
+      <EnumType id="Mod">
+         <EnumVal ord="1">on</EnumVal>
+         <EnumVal ord="2">blocked</EnumVal>
+         <EnumVal ord="3">test</EnumVal>
+         <EnumVal ord="4">test/blocked</EnumVal>
+         <EnumVal ord="5">off</EnumVal>
+      </EnumType>
+      <EnumType id="CtlModels">
+         <EnumVal ord="0">status-only</EnumVal>
+         <EnumVal ord="1">direct-with-normal-security</EnumVal>
+         <EnumVal ord="2">sbo-with-normal-security</EnumVal>
+         <EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+         <EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+      </EnumType>
+   </DataTypeTemplates>
+</SCL>
