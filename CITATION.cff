@@ -3,6 +3,7 @@ message: "If you use this software, please cite it as below."
 authors:
   - family-names: Acevedo Iles
     given-names: Manuel-Acevedo
-title: "Open-Source Code of an adaptive protection scheme using LIBIEC61850
+    orcid: https://orcid.org/0009-0000-5230-897X
+title: "Open-Source Code of an adaptive protection scheme using LIBIEC61850"
 version: 1.0
 date-released: 2023-12-15
